@@ -30,6 +30,13 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    // view binding
+    buildFeatures{
+        viewBinding true
+    }
+    viewBinding{
+        enabled = true
+    }
 }
 
 dependencies {
@@ -41,4 +48,24 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+    implementation 'com.google.code.gson:gson:2.8.9'
+    //gson : data conversion
+    implementation 'com.squareup.retrofit2:retrofit:2.6.4'
+    implementation 'com.squareup.retrofit2:converter-gson:2.6.4'
+
+    // Stetho
+    implementation 'com.facebook.stetho:stetho:1.5.1'
+    implementation 'com.facebook.stetho:stetho-okhttp3:1.5.1'
+    implementation 'com.facebook.stetho:stetho-js-rhino:1.5.1'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    //log check
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.7.2'
+
+    //encryption decryption
+    implementation "androidx.security:security-crypto-ktx:1.1.0-alpha03"
+
+    //retrofit dependency
+    implementation 'com.squareup.retrofit2:converter-scalars:2.5.0'
 }
