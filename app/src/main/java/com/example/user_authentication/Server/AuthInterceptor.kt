@@ -2,6 +2,7 @@ package com.example.user_authentication.Server
 
 import android.content.Context
 import android.content.Intent
+import com.example.user_authentication.LoginActivity
 import com.example.user_authentication.MainActivity
 import com.example.user_authentication.Model.Token
 import kotlinx.coroutines.runBlocking
@@ -59,9 +60,9 @@ class AuthInterceptor(
                             }
                             else -> {
                                 // fail all case -> logout
-//                                val intent = Intent(context,LoginActivity::class.java)
-//                                intent.putExtra("logout",true)
-//                                context.startActivity(intent)
+                                val intent = Intent(context, LoginActivity::class.java)
+                                intent.putExtra("logout",true)
+                                context.startActivity(intent)
                             }
                         }
                         return@runBlocking response
