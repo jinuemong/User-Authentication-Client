@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.activity.OnBackPressedCallback
+import androidx.fragment.app.DialogFragment
 import com.example.user_authentication.Model.GetUser
 import com.example.user_authentication.Server.MasterApplication
 import com.example.user_authentication.databinding.ActivityLoginBinding
@@ -18,7 +19,7 @@ import retrofit2.Response
 
 import kotlin.math.log
 
-class InsertFragment : Fragment() {
+class InsertFragment : DialogFragment() {
     private var _binding: FragmentInsertBinding? = null
     private lateinit var callback : OnBackPressedCallback
     private lateinit var loginActivity: LoginActivity
@@ -35,7 +36,7 @@ class InsertFragment : Fragment() {
     }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
+        setStyle(STYLE_NO_FRAME,R.style.DialogStyle)
     }
 
     override fun onCreateView(
@@ -113,10 +114,8 @@ class InsertFragment : Fragment() {
 
     // go activity
     private fun goBack(){
-        loginActivity.supportFragmentManager
-            .beginTransaction()
-            .remove(this@InsertFragment)
-            .commit()
+        this@InsertFragment.dismiss()
+
     }
 
     private fun getUserName() : String{

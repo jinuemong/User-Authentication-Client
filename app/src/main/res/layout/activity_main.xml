@@ -38,26 +38,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
     </LinearLayout>
-    <LinearLayout
-        android:background="#DFD8D8"
-        android:padding="10dp"
-        android:orientation="horizontal"
-        android:layout_marginTop="20dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-        <TextView
-            android:textStyle="bold"
-            android:textSize="20sp"
-            android:text="password : "
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-        <TextView
-            tools:text="password"
-            android:textSize="20sp"
-            android:id="@+id/pw"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-    </LinearLayout>
+
     <Button
         android:backgroundTint="@color/black"
         android:textSize="18sp"

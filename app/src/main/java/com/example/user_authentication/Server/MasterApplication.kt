@@ -14,7 +14,8 @@ import retrofit2.converter.scalars.ScalarsConverterFactory
 class MasterApplication : Application() {
 
     var service: RetrofitService? = null
-    val baseUrl = ""
+    // ngrok
+    private val baseUrl = "https://196b-14-51-88-88.ngrok-free.app"
     var activity  : Activity? = null
 
     override fun onCreate() {

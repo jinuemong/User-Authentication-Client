@@ -14,7 +14,7 @@ interface RetrofitService {
     @POST("user/login/")
     @FormUrlEncoded
     fun loginUser(
-        @Field("userName") userName: String,
+        @Field("username") username: String,
         @Field("password") password: String
     ): Call<GetUser>
 
@@ -22,7 +22,7 @@ interface RetrofitService {
     @POST("user/register/")
     @FormUrlEncoded
     fun registerUser(
-        @Field("userName") userName: String,
+        @Field("username") username: String,
         @Field("password") password: String
     ): Call<GetUser>
 
@@ -30,7 +30,7 @@ interface RetrofitService {
     @PATCH("user/current/")
     @FormUrlEncoded
     fun updatePassword(
-        @Field("userName") userName: String,
+        @Field("username") username: String,
         @Field("password") password: String
     ): Call<User>
 }
